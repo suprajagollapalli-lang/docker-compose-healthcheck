@@ -20,14 +20,13 @@ working, not just whether the container is running.
 
 ## 📂 Project Structure
 
-md
+```md
 
 .
 ├── Dockerfile
 ├── docker-compose.yml
 ├── app.py
 └── README.md
-
 
 ## 🐳 Docker Compose Healthcheck
 The docker-compose.yml includes a healthcheck that periodically checks an HTTP endpoint exposed by the Flask application.
