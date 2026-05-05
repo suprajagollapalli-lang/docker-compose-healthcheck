@@ -27,7 +27,7 @@ working, not just whether the container is running.
 ├── docker-compose.yml
 ├── app.py
 └── README.md
----*
+
 
 🐳 Docker Compose Healthcheck
 The docker-compose.yml includes a healthcheck that periodically checks an HTTP endpoint exposed by the Flask application.
@@ -38,84 +38,77 @@ Example
 - If the endpoint responds successfully → container is **healthy**
 - If the endpoint fails → container is **unhealthy**
 
-
 This is useful for:
-
 Dependency readiness
 Startup sequencing
 Container monitoring
 Production-style checks
-
----
 
 🚀 How It Works
 
 Flask app starts and exposes a /health endpoint
 Docker Compose runs a healthcheck using curl
 Docker updates container status:
-
 starting
 healthy
 unhealthy
 
-
-
 You can verify container health using:
-Shelldocker psShow more lines
+docker ps
 
 ▶️ How to Run
+
 1️⃣ Clone the repository
-Shellgit clone https://github.com/suprajagollapalli-lang/docker-compose-healthcheck.gitcd docker-compose-healthcheckShow more lines
+git clone https://github.com/suprajagollapalli-lang/docker-compose-healthcheck.git
+cd docker-compose-healthcheck
 
 2️⃣ Build and start the application
-Shelldocker compose up --buildShow more lines
+docker compose up --build
 
 3️⃣ Check container health
-Shelldocker ps``Show more lines
+docker ps
 You should see:
-Plain TextSTATUS:healthy)Show more lines
+STATUS:healthy
 
 🔍 Healthcheck Endpoint
 The Flask app exposes:
-Plain TextGET /healthShow more lines
+GET /health
 Expected response:
-Plain Text{  "status": "ok"Show more lines
+{ 
+"status": "ok"
 This endpoint is used by Docker Compose to determine container health.
----
+
 
 ✅ Why Healthchecks Matter
-Without a healthcheck:
-
+-Without a healthcheck:
 Docker only knows if the container process is running
 
-With a healthcheck:
-
+-With a healthcheck:
 Docker knows if the application inside the container is actually ready
 
-This is critical for:
-
+-This is critical for:
 Microservices
 CI/CD pipelines
 Real-world production deployments
 
----
+
 
 🧠 Key Learnings
 
-Difference between container running vs container healthy
-Using Docker Compose healthchecks effectively
-Running containerized Flask apps on Amazon Linux 2023
-Writing production‑style Docker configurations
+-Difference between container running vs container healthy
+-Using Docker Compose healthchecks effectively
+-Running containerized Flask apps on Amazon Linux 2023
+-Writing production‑style Docker configurations
 
----
+
 
 👤 Author
 Supraja Gollapalli
 Hands-on Docker & DevOps learning project.
----
+
 
 📌 Notes
 
-This project is designed for learning and demonstration purposes
-Works well on low-resource environments like AWS free-tier instances
+-This project is designed for learning and demonstration purposes.
+-Works well on low-resource environments like AWS free-tier instances.
 
