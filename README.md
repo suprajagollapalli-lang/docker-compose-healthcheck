@@ -28,10 +28,9 @@ working, not just whether the container is running.
 ├── app.py
 └── README.md
 
-## 🐳 Docker Compose Healthcheck
+🐳 Docker Compose Healthcheck
 The docker-compose.yml includes a healthcheck that periodically checks an HTTP endpoint exposed by the Flask application.
-Example 
-### Healthcheck Logic
+Example  Healthcheck Logic
 
 - Docker sends HTTP requests to `/health`
 - If the endpoint responds successfully → container is **healthy**
@@ -44,7 +43,7 @@ Container monitoring
 Production-style checks
 ---
 
-## 🚀 How It Works
+🚀 How It Works
 
 Flask app starts and exposes a /health endpoint
 Docker Compose runs a healthcheck using curl
@@ -92,7 +91,7 @@ Real-world production deployments
 
 
 
-##🧠 Key Learnings
+🧠 Key Learnings
 
 -Difference between container running vs container healthy
 -Using Docker Compose healthchecks effectively
@@ -101,7 +100,7 @@ Real-world production deployments
 
 ---
 
-##👤 Author
+👤 Author
 Supraja Gollapalli
 Hands-on Docker & DevOps learning project.
 
