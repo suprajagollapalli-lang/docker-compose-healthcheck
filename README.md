@@ -20,7 +20,7 @@ working, not just whether the container is running.
 
 ## 📂 Project Structure
 
-```md
+md
 
 .
 ├── Dockerfile
@@ -29,7 +29,7 @@ working, not just whether the container is running.
 └── README.md
 
 
-##🐳 Docker Compose Healthcheck
+## 🐳 Docker Compose Healthcheck
 The docker-compose.yml includes a healthcheck that periodically checks an HTTP endpoint exposed by the Flask application.
 Example 
 ### Healthcheck Logic
@@ -45,7 +45,7 @@ Container monitoring
 Production-style checks
 ---
 
-##🚀 How It Works
+## 🚀 How It Works
 
 Flask app starts and exposes a /health endpoint
 Docker Compose runs a healthcheck using curl
