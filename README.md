@@ -16,4 +16,3 @@ working, not just whether the container is running.
 
 ---
 
-## Project Structure
